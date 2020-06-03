@@ -152,7 +152,7 @@ int& Matrix::operator[](int row)
 {
 	for (int count = 0; count < row; count++)
 	{
-		cout << *this->_matrix[count] << " ";
+		std::cout << *this->_matrix[count] << " ";
 	}
 	return *this->_matrix[row];
 }
@@ -188,9 +188,9 @@ void Matrix::show()
 	{
 		for (int count_column = 0; count_column < this->_column; count_column++)
 		{
-			cout << setw(4) << this->_matrix[count_row][count_column] << " ";
+			std::cout << std::setw(4) << this->_matrix[count_row][count_column] << " ";
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 }
 Matrix::~Matrix()

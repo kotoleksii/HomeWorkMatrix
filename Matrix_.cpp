@@ -9,60 +9,56 @@ int main()
 
 	Matrix b(a);
 
-	cout << "1. Increment and decrement (both forms), which change all elements by 1. " << endl << "\t";
-	cout << "Matrix b\n"; b.show(); cout << "\t";
-	cout << "Matrix ++b\n"; (++b).show(); cout << "\t";
-	cout << "Matrix b++\n"; (b++).show(); cout << "\t";
-	cout << "Matrix b\n"; b.show(); cout << "\t";
-	cout << "Matrix --b\n"; (--b).show(); cout << "\t";
-	cout << "Matrix b--\n"; (b--).show(); cout << "\t";
-	cout << "Matrix b\n"; b.show(); cout << "\t";
+	std::cout << "1. Increment and decrement (both forms), which change all elements by 1. " << std::endl << "\t";
+	std::cout << "Matrix b\n"; b.show(); std::cout << "\t";
+	std::cout << "Matrix ++b\n"; (++b).show(); std::cout << "\t";
+	std::cout << "Matrix b++\n"; (b++).show(); std::cout << "\t";
+	std::cout << "Matrix b\n"; b.show(); std::cout << "\t";
+	std::cout << "Matrix --b\n"; (--b).show(); std::cout << "\t";
+	std::cout << "Matrix b--\n"; (b--).show(); std::cout << "\t";
+	std::cout << "Matrix b\n"; b.show(); std::cout << "\t";
 
-	cout << endl << "2. Comparison operators for two matrices (== and =!) " << endl <<"\t";
+	std::cout << std::endl << "2. Comparison operators for two matrices (== and =!) " << std::endl <<"\t";
 	Matrix c;
 	c.fill();
-	cout << "Matrix c\n"; c.show(); cout << "\t";
-	cout << "Matrix b\n"; b.show();
-	cout << boolalpha << "c == b " << (c == b) << "\t";
-	cout << boolalpha << "c != b " << (c != b) << endl;
+	std::cout << "Matrix c\n"; c.show(); std::cout << "\t";
+	std::cout << "Matrix b\n"; b.show();
+	std::cout << std::boolalpha << "c == b " << (c == b) << "\t";
+	std::cout << std::boolalpha << "c != b " << (c != b) << std::endl;
 
-	cout << endl << "3. Logical operators (<, <= , > , >=) " << endl;
-	cout << boolalpha << "c < b  " << (c < b) << "\t";
-	cout << boolalpha << "c <= b  " << (c <= b) << "\t";
-	cout << boolalpha << "c > b  " << (c > b) << "\t";
-	cout << boolalpha << "c >= b  " << (c >= b) << endl;
+	std::cout << std::endl << "3. Logical operators (<, <= , > , >=) " << std::endl;
+	std::cout << std::boolalpha << "c < b  " << (c < b) << "\t";
+	std::cout << std::boolalpha << "c <= b  " << (c <= b) << "\t";
+	std::cout << std::boolalpha << "c > b  " << (c > b) << "\t";
+	std::cout << std::boolalpha << "c >= b  " << (c >= b) << std::endl;
 
-	cout << endl << "4. Matrix c = Matrix b " << endl << "\t";
-	cout << "Matrix c " << endl;
+	std::cout << std::endl << "4. Matrix c = Matrix b " << std::endl << "\t";
+	std::cout << "Matrix c " << std::endl;
 	c = b;
 	c.show();
 
 	Matrix g;
 	g.fill();
-	cout << endl << "5. The operator [], which returns a string in the form of a one - dimensional array" << endl << "\t";
-	cout << "Matrix g " << endl;
-	g.show(); cout << "     ";
-	cout << "Line - "; g[5];
+	std::cout << std::endl << "5. The operator [], which returns a string in the form of a one - dimensional array" << std::endl << "\t";
+	std::cout << "Matrix g " << std::endl;
+	g.show(); std::cout << "     ";
+	std::cout << "Line - "; g[5];
 
-	/*g[2] = 100;
-	cout <<"Matrix g[2] = "<< g[2] << endl;
-	g.show();*/
-
-	cout << endl << endl << "6. Operator() to access any matrix element" << endl;
+	std::cout << std::endl << std::endl << "6. Operator() to access any matrix element" << std::endl;
 	Matrix d;
 	d.fill();
-	cout << "      Matrix d(2,2): " << d(2, 2) << endl;
+	std::cout << "      Matrix d(2,2): " << d(2, 2) << std::endl;
 	d.show();
 	d(2, 2) = 100;
-	cout << "    Matrix d(2,2) = 100 " << endl;
+	std::cout << "    Matrix d(2,2) = 100 " << std::endl;
 	d.show();
 
-	cout << endl << "7. Type to int conversion operator (sum of all matrix elements)" << endl;
+	std::cout << std::endl << "7. Type to int conversion operator (sum of all matrix elements)" << std::endl;
 	Matrix m;
 	m.fill();
 	int sum = m;
 	m.show();
-	cout << "Sum of all matrix elements - " << (int)sum << endl;
+	std::cout << "Sum of all matrix elements - " << (int)sum << std::endl;
 
 	return 0;
 }
