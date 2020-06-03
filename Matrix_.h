@@ -2,8 +2,6 @@
 #include <ctime>
 #include <iomanip>
 
-using namespace std;
-
 class Matrix
 {
 private:
